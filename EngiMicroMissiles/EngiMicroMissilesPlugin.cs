@@ -69,7 +69,7 @@ namespace EngiMicroMissiles
             skillDef2.skillName = "ENGI_PRIMARY_MICROMISSILES_NAME";
             skillDef2.skillNameToken = "ENGI_PRIMARY_MICROMISSILES_NAME";
 
-
+            
             LoadoutAPI.AddSkillDef(skillDef);
             Array.Resize<SkillFamily.Variant>(ref skillFamily.variants, skillFamily.variants.Length + 1);
             SkillFamily.Variant[] variants = skillFamily.variants;
@@ -80,6 +80,8 @@ namespace EngiMicroMissiles
             variant.unlockableName = "";
             variant.viewableNode = new ViewablesCatalog.Node(skillDef2.skillNameToken, false, null);
             variants[num] = variant;
+
+            LoadoutAPI.AddSkill(typeof(ChargeMissiles));
         }
 
 
