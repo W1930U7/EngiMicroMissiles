@@ -65,9 +65,9 @@ namespace EngiMicroMissiles
             skillDef2.shootDelay = skillDef.shootDelay;
             skillDef2.stockToConsume = skillDef.stockToConsume;
             skillDef2.icon = skillDef.icon;
-            skillDef2.skillDescriptionToken = "ARTI_PRIMARY_FASTBOLTS_DESCRIPTION";
-            skillDef2.skillName = "Micro Missiles";
-            skillDef2.skillNameToken = "ARTI_PRIMARY_FASTBOLTS_NAME";
+            skillDef2.skillDescriptionToken = "ENGI_PRIMARY_MICROMISSILES_DESCRIPTION";
+            skillDef2.skillName = "ENGI_PRIMARY_MICROMISSILES_NAME";
+            skillDef2.skillNameToken = "ENGI_PRIMARY_MICROMISSILES_NAME";
 
 
             LoadoutAPI.AddSkillDef(skillDef);
@@ -85,17 +85,15 @@ namespace EngiMicroMissiles
 
         private void AddLanguagetokens()
         {
-            Languages.AddToken("ARTI_PRIMARY_FASTBOLTS_NAME", "Micro Missiles");
+            Languages.AddToken("ENGI_PRIMARY_MICROMISSILES_NAME", "Micro Missiles");
+            
             string text = string.Concat(new string[]
             {
-                "Fire Flame Bolts for ",
-                this.colorText("110%", "#E5C962"),
-                " each. Shoots ",
-                this.colorText("more bolts", "#95CDE5"),
-                " when you have higher ",
-                this.colorText("attack speed", "#95CDE5")
+                "Fire Micro Missiles for ",
+                this.colorText("100% damage", "#E5C962"),
+                " each."
             });
-            Languages.AddToken("ARTI_PRIMARY_FASTBOLTS_DESCRIPTION", text);
+            Languages.AddToken("ENGI_PRIMARY_MICROMISSILES_DESCRIPTION", text);
         }
 
         private string colorText(string text, string hex)
